@@ -22,6 +22,8 @@ const Login = () => {
 
     try {
       const response = await login(email, password);
+      localStorage.setItem('access_token', response.access_token);
+      navigate('/create-service')
     } catch (error) {
       setError('Invalid email or password');
     }

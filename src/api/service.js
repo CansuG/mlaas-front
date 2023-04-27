@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const baseUrl = 'http://127.0.0.1:5000';
+const baseUrl = 'http://127.0.0.1:5000/services';
 
 export const getServices = async () => {
     try {
@@ -9,7 +9,7 @@ export const getServices = async () => {
     } catch (error) {
       throw error.response.data;
     }
-  };
+};
 
 export const summarizeText = async (text) => {
     try {

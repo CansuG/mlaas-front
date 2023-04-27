@@ -8,7 +8,7 @@ export const login = async (email, password) => {
       email,
       password,
     });
-    localStorage.setItem('access_token', response.access_token);
+    
     return response.data;
   } catch (error) {
     throw error.response.data;
@@ -35,7 +35,7 @@ export const logout = async () => {
       `${baseUrl}/logout`,
       {headers: { Authorization: `Bearer ${localStorage.getItem('access_token')}` } });
       
-      localStorage.removeItem('token')
+      localStorage.removeItem('access_token')
 
     } catch (error) {
     throw error.response.data;

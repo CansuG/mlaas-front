@@ -7,6 +7,8 @@ import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Auth/login';
 import Register from './components/Auth/register';
+import CreateService from './components/Services/create-service';
+import RateService from './components/Ratings/rating';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -16,6 +18,8 @@ root.render(
         <Route exact path="/" element={<App/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
+        <Route path="/create-service" element={<CreateService/>}/>
+        <Route path="/rate-service" element={<RateService/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
