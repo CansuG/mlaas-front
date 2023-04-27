@@ -8,6 +8,7 @@ export const login = async (email, password) => {
       email,
       password,
     });
+    localStorage.setItem('access_token', response.access_token);
     return response.data;
   } catch (error) {
     throw error.response.data;
@@ -29,10 +30,14 @@ export const register = async (email, password, fullName) => {
 
 export const logout = async () => {
   try {
+  
     await axios.post(
       `${baseUrl}/logout`,
       {headers: { Authorization: `Bearer ${localStorage.getItem('access_token')}` } });
-  } catch (error) {
+      
+      localStorage.removeItem('token')
+
+    } catch (error) {
     throw error.response.data;
   }
 };
