@@ -33,25 +33,29 @@ const Register = () => {
     }
   };
 
+  const handleLoginClick = () => {
+    navigate('/login');
+  };
+
   return (
-    <div className="auth-form">
-      <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
+    <div className="register">
+      <span className="registerTitle">Register</span>
+      <form onSubmit={handleSubmit} className="registerForm">
+        
           <label htmlFor="email">Email</label>
           <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} required />
-        </div>
-        <div className="form-group">
+        
+        
           <label htmlFor="password">Password</label>
           <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} required />
-        </div>
-        <div className="form-group">
+        
           <label htmlFor="fullName">Full Name</label>
           <input type="text" id="fullName" name="fullName" value={fullName} onChange={handleFullNameChange} required />
-        </div>
+        
         {error && <div className="error">{error}</div>}
-        <button type="submit">Register</button>
+        <button className="registerButton" type="submit">Register</button>
       </form>
+      <button className="registerLoginButton">Login</button>
     </div>
   );
 };

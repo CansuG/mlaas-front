@@ -10,6 +10,7 @@ const RateService = () => {
     event.preventDefault();
     try {
       await rateService(serviceName, rating, localStorage.getItem('access_token'));
+      
       // do something after successful rating, such as updating the service's rating or displaying a success message
     } catch (error) {
       setErrorMessage(error.message);

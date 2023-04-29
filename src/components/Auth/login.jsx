@@ -23,28 +23,30 @@ const Login = () => {
     try {
       const response = await login(email, password);
       localStorage.setItem('access_token', response.access_token);
-      navigate('/create-service')
+      navigate('/rate-service')
     } catch (error) {
       setError('Invalid email or password');
     }
   };
 
+  const handleRegisterClick = () => {
+    navigate('/register');
+  };
+
   return (
-    <div className="auth-form">
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <div className="form-group">
-          <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" value={email} onChange={handleEmailChange} required />
-        </div>
-        <div className="form-group">
-          <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" value={password} onChange={handlePasswordChange} required />
-        </div>
+    <div className="login">
+        <span className="loginTitle">LOGIN</span>
+        <form className="loginForm">
+            <label>Email</label>
+            <input onChange={handleEmailChange} type="text" placeholder="Enter your email..."/>
+            <label>Password</label>
+            <input onChange={handlePasswordChange} type="password" placeholder="Enter your password..."/>
+            <button onSubmit={handleSubmit} className="loginButton">Login</button>
+        </form>
         {error && <div className="error">{error}</div>}
-        <button type="submit">Login</button>
-      </form>
-    </div>
+        <button onClick={handleRegisterClick} className="loginRegisterButton">Register</button>
+            
+        </div>
   );
 };
 
