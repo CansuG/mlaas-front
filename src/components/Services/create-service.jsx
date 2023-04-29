@@ -14,7 +14,7 @@ const CreateService = () => {
   const handleCreateService = async (event) => {
     event.preventDefault();
     try {
-      const service = await createService(name, description, modelName, modelType);
+      const service = await createService(name, description, modelName, modelType, localStorage.getItem('access_token'));
       // do something with the created service, such as redirect to the service list page
       navigate('/')
     } catch (error) {

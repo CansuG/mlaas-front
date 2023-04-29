@@ -20,7 +20,7 @@ export const summarizeText = async (text) => {
     }
 };
 
-export const createService = async (name, description, model_name, model_type) => {
+export const createService = async (name, description, model_name, model_type, token) => {
     try {
       const response = await axios.post(`${baseUrl}/summarizer`, {
         name,
@@ -29,7 +29,7 @@ export const createService = async (name, description, model_name, model_type) =
         model_type,
       }, {
         headers: {
-          Authorization: `Bearer ${localStorage.getItem('access_token')}`,
+          Authorization: `Bearer `+ token,
         },
       });
       return response.data;

@@ -7,6 +7,8 @@ export const login = async (email, password) => {
     const response = await axios.post(`${baseUrl}/login`, {
       email,
       password,
+    },{
+      withCredentials: true // enable sending cookies with requests
     });
     
     return response.data;
@@ -33,7 +35,7 @@ export const logout = async () => {
   
     await axios.post(
       `${baseUrl}/logout`,
-      {headers: { Authorization: `Bearer ${localStorage.getItem('access_token')}` } });
+      {headers: { Authorization: `Bearer `+ localStorage.getItem('access_token') } });
       
       localStorage.removeItem('access_token')
 
