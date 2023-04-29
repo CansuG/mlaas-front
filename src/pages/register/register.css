@@ -15,61 +15,7 @@
     --greenl: #e9f5db;
 
 }
-.login{
-    height: calc(100vh - 50px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(rgba(150, 211, 141, 0.4),rgba(25, 90, 40, 0.6));
-    background-size: cover;
-}
-.loginTitle{
-    font-size: 60px;
-  
-    margin-bottom: 20px;
-    font-family: 'Silkscreen', cursive;
-    letter-spacing: 20px;
-}
-.loginForm{
-    margin-top: 20px;
-    display: flex;
-    flex-direction: column;
-}
 
-.loginForm > label{
-    margin: 10px 0;
-    font-family: 'Montserrat', sans-serif;
-}
-
-.loginForm > input{
-    padding: 10px;
-    border: none;
-    background-color: var(--green-light1);
-    font-family: 'Montserrat', sans-serif;
-}
-
-.loginButton{
-    margin-top: 20px;
-    cursor: pointer;
-    background-color: var(--green-light2);
-    border: none;
-    color: var(--greenl);
-    border-radius: 40px;
-    padding: 10px;
-}
-
-.loginRegisterButton{
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    background-color: var(--brown3);
-    border: none;
-    padding: 15px;
-    border-radius: 30px;
-    color: #CAD2C5;
-    cursor: pointer;
-}
 
 
 .register{

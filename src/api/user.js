@@ -1,10 +1,9 @@
 import axios from 'axios';
-
-const baseUrl = 'http://127.0.0.1:5000/auth';
+import RequestService from '../Services/RequestService';
 
 export const login = async (email, password) => {
   try {
-    const response = await axios.post(`${baseUrl}/login`, {
+    const response = await RequestService.post(`/auth/login`, {
       email,
       password,
     },{
@@ -19,7 +18,7 @@ export const login = async (email, password) => {
 
 export const register = async (email, password, fullName) => {
   try {
-    const response = await axios.post(`${baseUrl}/register`, {
+    const response = await RequestService.post(`/auth/register`, {
       email,
       password,
       full_name: fullName,
@@ -33,8 +32,8 @@ export const register = async (email, password, fullName) => {
 export const logout = async () => {
   try {
   
-    await axios.post(
-      `${baseUrl}/logout`,
+    await RequestService.post(
+      `auth/logout`,
       {headers: { Authorization: `Bearer `+ localStorage.getItem('access_token') } });
       
       localStorage.removeItem('access_token')

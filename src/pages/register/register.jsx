@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { register } from '../../api/user';
-import './Auth.css';
+import './register.css';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -55,7 +55,7 @@ const Register = () => {
         {error && <div className="error">{error}</div>}
         <button className="registerButton" type="submit">Register</button>
       </form>
-      <button className="registerLoginButton">Login</button>
+      <button onClick={handleLoginClick} className="registerLoginButton">Login</button>
     </div>
   );
 };

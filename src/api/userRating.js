@@ -1,21 +1,18 @@
 import axios from 'axios';
-
-const baseUrl = 'http://127.0.0.1:5000/services';
+import RequestService from '../Services/RequestService';
 
 export const rateService = async (service_name, rating, token) => {
     try {
-        const response = await fetch(`${baseUrl}/rating`, {
-        method: 'POST',
-        credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json',
-           Authorization: `Bearer `+ token,
+        const response = await RequestService.post(`/services/rating`, {
+            
+            service_name: service_name,
+            rating: rating,
         },
-        body: JSON.stringify({
-          service_name: service_name,
-          rating: rating,
-        }),
-      });
+        {
+        headers: {
+            Authorization: `Bearer `+ token,
+        },
+        });
       const data = await response.json();
       if (!response.ok) {
         console.log(data.message)
@@ -30,7 +27,7 @@ export const rateService = async (service_name, rating, token) => {
 
 export const getRatings = async () => {
   try {
-    const response = await axios.get(`${baseUrl}/ratings`);
+    const response = await RequestService.get(`/services/ratings`);
     return response.data;
   } catch (error) {
     throw error.response.data;

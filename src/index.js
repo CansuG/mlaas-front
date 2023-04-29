@@ -5,9 +5,9 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './components/Auth/login';
-import Register from './components/Auth/register';
-import CreateService from './components/Services/create-service';
+import Login from './pages/login/login';
+import Register from './pages/register/register';
+import CreateService from './pages/create-service/create-service';
 import RateService from './components/Ratings/rating';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
