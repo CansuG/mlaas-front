@@ -1,10 +1,9 @@
 import axios from 'axios';
-
-const baseUrl = 'http://127.0.0.1:5000/services';
+import RequestService from '../Services/RequestService';
 
 export const getServices = async () => {
     try {
-      const response = await axios.get(`${baseUrl}/service`);
+      const response = await RequestService.get(`/services/service`);
       return response.data;
     } catch (error) {
       throw error.response.data;
@@ -13,7 +12,7 @@ export const getServices = async () => {
 
 export const summarizeText = async (text) => {
     try {
-        const response = await axios.post(`${baseUrl}/summarize`, { text });
+        const response = await RequestService.post(`/services/summarize`, { text });
         return response.data;
     } catch (error) {
         throw error.response.data;
@@ -22,7 +21,7 @@ export const summarizeText = async (text) => {
 
 export const createService = async (name, description, model_name, model_type, token) => {
     try {
-      const response = await axios.post(`${baseUrl}/summarizer`, {
+      const response = await RequestService.post(`/services/summarizer`, {
         name,
         description,
         model_name,

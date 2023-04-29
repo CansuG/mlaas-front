@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { login } from '../../api/user';
-import './Auth.css';
+import './login.css';
 
 const Login = () => {
   const navigate = useNavigate();
@@ -30,7 +30,7 @@ const Login = () => {
   };
 
   const handleRegisterClick = () => {
-    navigate('/register');
+    navigate('/register')
   };
 
   return (
@@ -41,7 +41,7 @@ const Login = () => {
             <input onChange={handleEmailChange} type="text" placeholder="Enter your email..."/>
             <label>Password</label>
             <input onChange={handlePasswordChange} type="password" placeholder="Enter your password..."/>
-            <button onSubmit={handleSubmit} className="loginButton">Login</button>
+            <button onClick={handleSubmit} className="loginButton">Login</button>
         </form>
         {error && <div className="error">{error}</div>}
         <button onClick={handleRegisterClick} className="loginRegisterButton">Register</button>
