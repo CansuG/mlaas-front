@@ -1,4 +1,3 @@
-import axios from 'axios';
 import RequestService from '../Services/RequestService';
 
 export const login = async (email, password) => {

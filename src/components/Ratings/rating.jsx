@@ -2,9 +2,15 @@ import React, { useState } from 'react';
 import { rateService } from '../../api/userRating';
 
 const RateService = () => {
-  const [serviceName, setServiceName] = useState('');
+  const [serviceName, setServiceName] = useState(localStorage.getItem('service_name') || '');
   const [rating, setRating] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
+
+  useEffect(() => {
+    
+    setServiceName(localStorage.getItem('service_name'));
+    
+  }, []);
 
   const handleRateService = async (event) => {
     event.preventDefault();
@@ -22,18 +28,6 @@ const RateService = () => {
       <h2>Rate a service</h2>
       <form onSubmit={handleRateService}>
         <div className="mb-3">
-          <label htmlFor="service-name" className="form-label">
-            Service Name
-          </label>
-          <input
-            type="text"
-            className="form-control"
-            id="service-name"
-            placeholder="Enter service name"
-            value={serviceName}
-            onChange={(event) => setServiceName(event.target.value)}
-            required
-          />
         </div>
         <div className="mb-3">
           <label htmlFor="rating" className="form-label">
