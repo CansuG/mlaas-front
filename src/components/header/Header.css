@@ -1,0 +1,21 @@
+.header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    background-color: #0e0235;
+    color: #fff;
+    padding: 50px;
+    box-sizing: border-box;
+  }
+  
+  .header-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .header-description {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+  }
