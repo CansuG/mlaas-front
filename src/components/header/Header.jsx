@@ -1,16 +1,29 @@
 import React from 'react';
-import './Header.css'; // import your CSS file
 
-const Header = () => {
-  return (
-    <header>
-      <div className="header-wrapper">
-        <h1 className="header-title">ML on Demand</h1>
-        <p className="header-description">Variety of machine learning models for your needs.</p>
-        {/* Add your header image or animated graphic here */}
+
+import './Header.css';
+
+const Header = () => (
+  <div className="gpt3__header section__padding" id="home">
+    <div className="gpt3__header-content">
+      <h1 className="gradient__text">ML on Demand</h1>
+      <p>Variety of Machine Learning Models for your needs.</p>
+
+      <div className="gpt3__header-content__input">
+        <input type="email" placeholder="Your Email Address" />
+        <button type="button">Subscribe</button>
       </div>
-    </header>
-  );
-};
+
+      <div className="gpt3__header-content__people">
+        
+        <p>1,600 people requested access a visit in last 24 hours</p>
+      </div>
+    </div>
+
+    <div className="gpt3__header-image">
+   
+    </div>
+  </div>
+);
 
 export default Header;
