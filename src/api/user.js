@@ -33,6 +33,9 @@ export const logout = async (token) => {
   
     await RequestService.post(
       `/auth/logout`,
+      {
+        withCredentials: true // enable sending cookies with requests
+      },
       {headers: { Authorization: `Bearer `+ token } });
 
     } catch (error) {
