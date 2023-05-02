@@ -3,7 +3,7 @@ import RequestService from '../Services/RequestService';
 
 export const getServices = async () => {
     try {
-      const response = await RequestService.get(`/services/service`);
+      const response = await RequestService.get(`/services/services`);
       return response.data;
     } catch (error) {
       throw error.response.data;
