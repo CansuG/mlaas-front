@@ -36,3 +36,11 @@ export const createService = async (name, description, model_name, model_type, t
       throw error.response.data;
     }
   };
+
+export const getService = async (service_id) => {
+    try{
+      const response = await RequestService.get(`/services/service/${service_id}`);
+    }catch (error) {
+        throw error.response.data;
+      }
+  };

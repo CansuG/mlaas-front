@@ -1,20 +1,23 @@
 import React, { useState } from 'react';
 import { rateService } from '../../api/userRating';
-
+import { getService } from '../../api/service';
+import {useEffect} from 'react';
 const RateService = () => {
-  const [serviceName, setServiceName] = useState(localStorage.getItem('service_name') || '');
+  const [serviceId, setServiceId] = useState(localStorage.getItem('service_id') || '');
   const [rating, setRating] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
 
   useEffect(() => {
     
-    setServiceName(localStorage.getItem('service_name'));
+    setServiceId(localStorage.getItem('service_id'));
     
   }, []);
 
   const handleRateService = async (event) => {
     event.preventDefault();
     try {
+      const result = await getService(serviceId)
+      const serviceName = result.name
       await rateService(serviceName, rating, localStorage.getItem('access_token'));
       
       // do something after successful rating, such as updating the service's rating or displaying a success message
