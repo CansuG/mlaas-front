@@ -9,14 +9,13 @@ import Login from './pages/login/login';
 import Register from './pages/register/register';
 import CreateService from './pages/create-service/create-service';
 import RateService from './components/Ratings/rating';
-import TopBar from "./components/topbar/TopBar";
 import Service from "./components/Services/summarizer/summarizer"
+import ServicesList from './components/Services/service-list/service-list';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
-     
       <Routes>
         <Route exact path="/" element={<App/>} />
         <Route path="/login" element={<Login/>} />
@@ -24,6 +23,7 @@ root.render(
         <Route path="/create-service" element={<CreateService/>}/>
         <Route path="/rate-service" element={<RateService/>}/>
         <Route path="/summarize" element={<Service/>}/>
+        <Route path="/service-list" element={<ServicesList/>}/>
       </Routes>
     </Router>
   </React.StrictMode>

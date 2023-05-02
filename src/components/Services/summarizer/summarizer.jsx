@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { summarizeText } from '../../../api/service';
-
+import RateService
+ from '../../Ratings/rating';
 const Service = () => {
   const [input, setInput] = useState('');
   const [response, setResponse] = useState('');
@@ -27,8 +28,12 @@ const Service = () => {
         </label>
         <button onClick={handleSubmit}>Calculate</button>
         {response && <p style={{backgroundColor: "#ffffff", color: "#000000", border: "2px solid #000000", borderRadius: "4px", padding: "8px", marginTop: "16px"}}>Output: {response}</p>}
+
+        <div><RateService/></div>
+      
       </div>
-    
+
+        
   );
 
 };

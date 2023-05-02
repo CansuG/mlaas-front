@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { rateService } from '../../api/userRating';
-import { getService } from '../../api/service';
 import {useEffect} from 'react';
 const RateService = () => {
   
