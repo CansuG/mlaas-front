@@ -29,7 +29,7 @@ const Service = () => {
         <button onClick={handleSubmit}>Calculate</button>
         {response && <p style={{backgroundColor: "#ffffff", color: "#000000", border: "2px solid #000000", borderRadius: "4px", padding: "8px", marginTop: "16px"}}>Output: {response}</p>}
 
-        <div><RateService/></div>
+        <div><RateService name="Summarizer"/></div>
       
       </div>
 
