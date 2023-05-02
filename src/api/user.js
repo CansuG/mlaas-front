@@ -28,14 +28,12 @@ export const register = async (email, password, fullName) => {
   }
 };
 
-export const logout = async () => {
+export const logout = async (token) => {
   try {
   
     await RequestService.post(
-      `auth/logout`,
-      {headers: { Authorization: `Bearer `+ localStorage.getItem('access_token') } });
-      
-      localStorage.removeItem('access_token')
+      `/auth/logout`,
+      {headers: { Authorization: `Bearer `+ token } });
 
     } catch (error) {
     throw error.response.data;
