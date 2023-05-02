@@ -11,6 +11,7 @@ import CreateService from './pages/create-service/create-service';
 import RateService from './components/Ratings/rating';
 import TopBar from "./components/topbar/TopBar";
 import Service from "./components/Services/summarizer/summarizer"
+import QuestionAnsweringService from './components/Services/question-answering/question-answering';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,6 +25,7 @@ root.render(
         <Route path="/create-service" element={<CreateService/>}/>
         <Route path="/rate-service" element={<RateService/>}/>
         <Route path="/summarize" element={<Service/>}/>
+        <Route path ="/question-answering" element={<QuestionAnsweringService/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
