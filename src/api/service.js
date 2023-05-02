@@ -19,6 +19,15 @@ export const summarizeText = async (text) => {
     }
 };
 
+export const questionAnswering = async (text, question) => {
+    try { 
+        const response = await RequestService.post(`/services/qa`, { text, question });
+        return response.data;
+    } catch (error) {             
+        throw error.response.data;
+    }     
+};
+
 export const createService = async (name, description, model_name, model_type, token) => {
     try {
       const response = await RequestService.post(`/services/summarizer`, {
