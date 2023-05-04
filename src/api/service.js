@@ -10,6 +10,15 @@ export const getServices = async () => {
     }
 };
 
+export const classifyGender = async (formData) => {
+  try {
+    const response = await RequestService.post(`/services/genderapp`,  formData );
+    return response.data;
+} catch (error) {
+    throw error.response.data;
+}
+};
+
 export const summarizeText = async (text) => {
     try {
         const response = await RequestService.post(`/services/summarize`, { text });

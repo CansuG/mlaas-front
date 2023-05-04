@@ -12,6 +12,7 @@ import RateService from './components/Ratings/rating';
 import Service from "./components/Services/summarizer/summarizer"
 import ServicesList from './components/Services/service-list/service-list';
 import QuestionAnsweringService from './components/Services/question-answering/question-answering';
+import GenderClassification from './components/Services/gender-classification/gender-classification';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -22,10 +23,9 @@ root.render(
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/create-service" element={<CreateService/>}/>
-        <Route path="/rate-service" element={<RateService/>}/>
         <Route path="/summarize" element={<Service/>}/>
-        <Route path="/service-list" element={<ServicesList/>}/>
         <Route path ="/question-answering" element={<QuestionAnsweringService/>}/>
+        <Route path ="/genderapp" element={<GenderClassification/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
