@@ -1,0 +1,46 @@
+.container {
+    background-color: #1d1d1d; /* set background color */
+    color: #fff; /* set text color */
+    padding: 20px; /* add padding */
+  }
+  
+  .row {
+    display: flex; /* use flexbox to center columns */
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .col {
+    margin: 20px; /* add margin */
+  }
+  
+  .form-control {
+    background-color: #333; /* set input background color */
+    color: #fff; /* set input text color */
+    border: none; /* remove input border */
+  }
+  
+  .btn {
+    background-color: #ff6347; /* set button background color */
+    color: #fff; /* set button text color */
+    border: none; /* remove button border */
+    margin-top: 10px; /* add margin to button */
+  }
+  
+  .table {
+    background-color: #333; /* set table background color */
+    color: #fff; /* set table text color */
+    border-radius: 10px; /* add rounded corners to table */
+    overflow: hidden; /* hide table overflow */
+  }
+  
+  th, td {
+    border: none; /* remove table borders */
+    padding: 10px; /* add padding to table cells */
+  }
+  
+  th {
+    background-color: #ff6347; /* set header background color */
+    color: #fff; /* set header text color */
+    font-weight: bold; /* make header text bold */
+  }
