@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { summarizeText } from '../../../api/service';
+import "./summarizer.css"
 
 const Service = () => {
   const [input, setInput] = useState('');
@@ -19,18 +20,20 @@ const Service = () => {
   };
 
   return (
-    
-      <div>
-        <label>
-          Input:
-          <input type="text" value={input} onChange={e => setInput(e.target.value)} />
-        </label>
-        <button onClick={handleSubmit}>Calculate</button>
-        {response && <p style={{backgroundColor: "#ffffff", color: "#000000", border: "2px solid #000000", borderRadius: "4px", padding: "8px", marginTop: "16px"}}>Output: {response}</p>}
+    <div className="section">
+      <div className="section__margin">
+        <h1 className="title">Text Summarizer</h1>
+        <form onSubmit={handleSubmit}>
+          <label className="input__label">
+            Input:
+            <input className="input__field" type="text" value={input} onChange={e => setInput(e.target.value)} />
+          </label>
+          <button className="calculate__button" type="submit">Calculate</button>
+        </form>
+        {response && <p className="output__text">Output: {response}</p>}
       </div>
-    
+    </div>
   );
-
 };
 
 export default Service;

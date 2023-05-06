@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+:root {
+  --font-family: 'Manrope', sans-serif;
+
+  --gradient-text: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+  --gradient-bar: linear-gradient(103.22deg, #AE67FA -13.86%, #F49867 99.55%);
+  
+  --color-bg: #040C18;
+  --color-footer : #031B34;
+  --color-blog: #042c54;
+  --color-text: #81AFDD;
+  --color-subtext: #FF8A71;
+}
+
+body {
+  /*background: linear-gradient(to bottom right, #291636, #4125bb);*/
+  font-family: var(--font-family);
+  font-size: 16px;
+  color: var(--color-text);
+  background:-moz-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* opera 11.10+ */
+  background:-o-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* ie 10+ */
+  background:-ms-radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+  /* global 92%+ browsers support */
+  background:radial-gradient(circle at 3% 25%, rgba(0, 40, 83, 1) 0%, rgba(4, 12, 24, 1) 25%);
+
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-blog);
+  color: var(--color-text);
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 2rem;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease-in-out;
+ 
+
+}
+
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 4rem auto 4rem;
+    text-align: center;
+    color: var(--color-text);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+    letter-spacing: 0.03em;
+    word-spacing: 0.2rem;
+  }
+
+.section__margin {
+  margin: 4rem 2rem;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.input-group input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  margin-bottom: 1rem;
+  background-color: #f3f3f3;
+}
+
+.input-group button {
+  background-color: var(--gradient-bar);
+  color: white;
+  font-size: 1.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.input-group button:hover {
+  transform: scale(1.05);
+}
+
+.output-group {
+  margin-top: 1rem;
+  background-color: #f3f3f3;
+  color: var(--color-text);
+  border-radius: 5px;
+  padding: 1rem;
+  width: 100%;
+}
+
+.output-group p {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.output-group pre {
+  font-size: 1rem;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+
+input[type="text"] {
+    border: 2px solid #f49867;
+    border-radius: 4px;
+    padding: 8px;
+    font-size: 16px;
+    color: #000;
+    background-color: #fff;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top:0.5rem
+  }
+  
+  button {
+    background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 130.67%);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+  }
+  
+  button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+  label {
+    margin-right: 1rem;
+    margin-left:1rem
+  }
+  
+  .input-container {
+    margin: 1rem;
+  }
+  
+  /* Media query for small screens */
+  @media screen and (max-width: 600px) {
+    .input-container {
+      margin: 0.5rem;
+    }
+  }
+  
+  /* Media query for extra small screens */
+  @media screen and (max-width: 400px) {
+    .input-container {
+      margin: 0.25rem;
+    }
+  }
+
+  @media (max-width: 768px) {
+    input[type="text"], button {
+      width: 100%;
+      margin-right: 0;
+    }
+  }
+  @media (max-width: 768px) {
+    .title {
+      word-spacing: 0.1em; /* increased word spacing for smaller screens */
+    }
+  }
+
+  @media only screen and (max-width: 400px) {
+    .title {
+      letter-spacing: 1px;
+      word-spacing: 5px;
+    }
+  }
