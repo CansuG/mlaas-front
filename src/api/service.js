@@ -12,12 +12,19 @@ export const getServices = async () => {
 
 export const classifyGender = async (formData) => {
   try {
-    const response = await RequestService.post(`/services/gender_classification`,  formData );
+    const config = {
+      headers: {
+        'Content-Type': 'multipart/form-data'
+      }
+    };
+
+    const response = await RequestService.post(`/services/gender_classification`, formData, config);
     return response.data;
-} catch (error) {
+  } catch (error) {
     throw error.response.data;
-}
+  }
 };
+
 
 export const summarizeText = async (text) => {
     try {
@@ -26,15 +33,6 @@ export const summarizeText = async (text) => {
     } catch (error) {
         throw error.response.data;
     }
-};
-
-export const get_predicted_image = async () => {
-  try {
-      const response = await RequestService.get(`/services/get_predicted_image`);
-      return response.data;
-  } catch (error) {
-      throw error.response.data;
-  }
 };
 
 export const questionAnswering = async (text, question) => {

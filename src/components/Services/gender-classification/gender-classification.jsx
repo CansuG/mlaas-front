@@ -1,34 +1,50 @@
-import React, { useState } from 'react';
-import axios from 'axios';
-import { classifyGender, get_predicted_image } from '../../../api/service';
+import React, { useState, useEffect } from 'react';
+import { classifyGender } from '../../../api/service';
 import './gender-classification.css';
 import base64ToImage from '../../../Utilies/show-image';
 
 const GenderClassification = () => {
   const [file, setFile] = useState(null);
-  const [prediction, setPrediction] = useState(null);
+  const [prediction, setPrediction] = useState([]);
   const [predicted_image, setPredicted_image] = useState(null);
 
   const handleFileChange = (event) => {
     setFile(event.target.files[0]);
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  useEffect(() => {
+    console.log(prediction); // Log prediction value whenever it changes
+  }, [prediction]);
 
-    const formData = new FormData();
-    formData.append('file', file);
+  useEffect(() => {
+    console.log(predicted_image); // Log prediction value whenever it changes
+  }, [predicted_image]);
 
-    try {
-      const response = await classifyGender(formData);
-      await setPrediction(response.report);
-      const image = await get_predicted_image();
-      await setPredicted_image(image)
-      console.log(prediction);
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  useEffect(() => {
+    const fetchData = async () => {
+      if (file) {
+        const formData = new FormData();
+        formData.append('file', file);
+        
+          const response = await classifyGender(formData).then(
+            res => {
+                setPrediction(res.report);
+                let image = base64ToImage(res.prediction_image_data)
+                console.log(image)
+                console.log(prediction)
+                setPredicted_image(image);
+            }
+          ).catch(err => {
+            console.log(err)
+          });
+      
+        }
+      
+    };
+    
+    fetchData();
+    
+  }, [file]);
 
   return (
     <div className="container">
@@ -44,7 +60,6 @@ const GenderClassification = () => {
           <form>
             <div className="input-group">
               <input type="file" className="form-control" onChange={handleFileChange} required />
-              <input onClick={handleSubmit} type="submit" value="Upload & Predict" className="btn btn-outline-primary" />
             </div>
           </form>
         </div>
@@ -54,7 +69,7 @@ const GenderClassification = () => {
               <br />
               <br />
               <h3 className="display-8">Predicted Image</h3>
-              <img src={base64ToImage(predicted_image)} className="image-fluid" height="100" alt="" />
+              <img src={predicted_image} className="image-fluid" height="100" alt="" />
               <hr />
               <br />
               <table className="table table-hover table-striped">
