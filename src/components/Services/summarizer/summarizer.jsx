@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { summarizeText } from '../../../api/service';
-import RateService
- from '../../Ratings/rating';
+import "./summarizer.css"
+
 const Service = () => {
   const [input, setInput] = useState('');
   const [response, setResponse] = useState('');
@@ -20,22 +20,27 @@ const Service = () => {
   };
 
   return (
+    <div className="section">
+      <div className="section__margin">
+     
+        <h1 className="title gradient__text">Text Summarizer</h1>
+        <form onSubmit={handleSubmit} className="form__container">
+          <label className="input__label">
+            Input:
+            <textarea className="input__field" value={input} onChange={e => setInput(e.target.value)} />
+          </label>
+          <button className="calculate__button" type="submit">Calculate</button>
+        </form>
+        {response && (
+  <div className="output-container">
+    <p className="output__text">Output: {response}</p>
+  </div>
+)}
     
-      <div>
-        <label>
-          Input:
-          <input type="text" value={input} onChange={e => setInput(e.target.value)} />
-        </label>
-        <button onClick={handleSubmit}>Calculate</button>
-        {response && <p style={{backgroundColor: "#ffffff", color: "#000000", border: "2px solid #000000", borderRadius: "4px", padding: "8px", marginTop: "16px"}}>Output: {response}</p>}
-
-        <div><RateService name="Summarizer"/></div>
-      
       </div>
+    </div>
 
-        
   );
-
 };
 
 export default Service;
