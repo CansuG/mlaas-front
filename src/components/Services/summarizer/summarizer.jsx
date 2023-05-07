@@ -39,6 +39,7 @@ const Service = () => {
     
       </div>
     </div>
+
   );
 };
 

@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { rateService } from '../../api/userRating';
-import { getService } from '../../api/service';
 import {useEffect} from 'react';
-const RateService = () => {
+const RateService = ({name}) => {
   
   const [rating, setRating] = useState(0);
   const [errorMessage, setErrorMessage] = useState('');
@@ -10,7 +9,7 @@ const RateService = () => {
   const handleRateService = async (event) => {
     event.preventDefault();
     try {
-      await rateService("Summarizer", rating, localStorage.getItem('access_token'));
+      await rateService(name, rating, localStorage.getItem('access_token'));
       
       // do something after successful rating, such as updating the service's rating or displaying a success message
     } catch (error) {
