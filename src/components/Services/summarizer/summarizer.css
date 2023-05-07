@@ -84,13 +84,15 @@ body {
   width: 100%;
 }
 
-  
+
 
 .input__label {
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
   letter-spacing: 0.1rem;
+  margin-right: 1rem;
+    margin-left:1rem
 }
 
 .input-group input {
@@ -193,15 +195,12 @@ body {
    
   }
   
-  button:hover {
+  .calculate__button:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transform: translateY(5px);
 
   }
-  label {
-    margin-right: 1rem;
-    margin-left:1rem
-  }
+
   
   .input-container {
     margin: 1rem;
