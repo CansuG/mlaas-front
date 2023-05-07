@@ -29,7 +29,7 @@ const Service = () => {
             Input:
             <textarea className="input__field" value={input} onChange={e => setInput(e.target.value)} />
           </label>
-          <button className="calculate__button" type="submit">Calculate</button>
+          <button className="calculate__button" type="submit">Submit</button>
         </form>
         {response && (
   <div className="output-container">
