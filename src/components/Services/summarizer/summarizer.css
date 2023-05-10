@@ -50,9 +50,9 @@ body {
   background-color: var(--color-blog);
   color: var(--color-text);
   border-radius: 10px;
-  padding: 0.4rem;
-  margin: 7rem;
-  margin-top:1rem;
+  padding: 5rem;
+  margin: 4rem;
+  margin-top:3rem;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease-in-out;
   overflow-x: auto;
@@ -62,7 +62,7 @@ body {
 
 .title {
     font-size: 2.4rem;
-    font-weight: 300;
+    font-weight: 400;
     margin: 4rem auto 4rem;
     text-align: center;
     color: var(--color-text);
