@@ -5,46 +5,64 @@
 	box-sizing: border-box;
 }
 
-body {
+.home-body {
 	
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	font-family: 'Montserrat', sans-serif;
+	
 	height: 100vh;
 	margin: -20px 0 50px;
 }
 
-h1 {
+.header {
+	color: #042c54;
 	font-weight: bold;
 	margin: 0;
+	font-family: 'Manrope', sans-serif;
 }
 
-h2 {
-	text-align: center;
+.overlay .overlay-h1{
+	font-weight: 250;
+	margin-bottom: 20px;
+	font-size: 30px;
+	letter-spacing: 3px;
+	font-family: 'Manrope', sans-serif;
 }
 
-p {
+
+.desc {
 	font-size: 14px;
 	font-weight: 100;
 	line-height: 20px;
-	letter-spacing: 0.5px;
+	letter-spacing: 2px;
 	margin: 20px 0 30px;
 }
 
-span {
-	font-size: 12px;
+.info {
+	color: rgb(90, 65, 126);
+	font-weight: 100;
+	font-size: 14px;
+	margin-bottom:10px;
+	font-family: 'Manrope', sans-serif;
 }
 
-a {
+.forgotpass{
+	color: rgb(90, 65, 126);
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+.social {
 	color: #333;
 	font-size: 14px;
 	text-decoration: none;
 	margin: 15px 0;
 }
 
-button {
+.main-button, .ghost {
 	border-radius: 20px;
 	border: 1px solid #FF4B2B;
 	background-color: #FF4B2B;
@@ -57,20 +75,28 @@ button {
 	transition: transform 80ms ease-in;
 }
 
-button:active {
+.main-button:active {
 	transform: scale(0.95);
 }
 
-button:focus {
+.ghost:active {
+	transform: scale(0.95);
+}
+
+.main-button:focus {
 	outline: none;
 }
 
-button.ghost {
+.ghost:focus {
+	outline: none;
+}
+
+.ghost {
 	background-color: transparent;
 	border-color: #FFFFFF;
 }
 
-form {
+.sign-in-up-form{
 	background-color: #ffffff;
 	display: flex;
 	align-items: center;
@@ -81,7 +107,7 @@ form {
 	text-align: center;
 }
 
-input {
+.form-container input {
 	background-color: #eee;
 	border: none;
 	padding: 12px 15px;
@@ -91,7 +117,7 @@ input {
 
 .container {
 	background-color: #fff;
-	border-radius: 10px;
+	border-radius: 20px;
   	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
 	position: relative;
