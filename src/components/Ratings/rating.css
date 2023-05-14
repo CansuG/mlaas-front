@@ -1,0 +1,40 @@
+.rating-container {
+    display: flex;
+    align-items: center;
+}
+  
+
+.rate__button {
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+ 
+   
+  }
+  
+.rate__button:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(5px);
+
+}
+  
+.star {
+   color:beige
+}
+
+.star-hover {
+    color: #F49867;
+} 
+
+.star-filled {
+    color: #F49867;
+} 
+  
+  
+  

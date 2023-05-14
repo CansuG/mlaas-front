@@ -10,6 +10,7 @@ import Service from "./components/Services/summarizer/summarizer"
 import QuestionAnsweringService from './components/Services/question-answering/question-answering';
 import GenderClassification from './components/Services/gender-classification/gender-classification';
 import SignInUp from './pages/sign-in-up/sign-in-up';
+import RateService from './components/Ratings/rating';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,6 +24,7 @@ root.render(
         <Route path="/summarize" element={<Service/>}/>
         <Route path ="/question-answering" element={<QuestionAnsweringService/>}/>
         <Route path ="/genderapp" element={<GenderClassification/>}/>
+        <Route path ="/rating" element={<RateService/>}/>
       </Routes>
     </Router>
   </React.StrictMode>

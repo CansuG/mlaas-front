@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { classifyGender } from '../../../api/service';
 import './gender-classification.css';
+import RateService from '../../Ratings/rating';
 
 
 const GenderClassification = () => {
@@ -68,6 +69,8 @@ const GenderClassification = () => {
           )}
         </div>
       </div>
+
+      <div><RateService name="Gender Classifier"/></div>
     </div>
   );
 };

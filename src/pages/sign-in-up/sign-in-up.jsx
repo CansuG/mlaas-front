@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { register } from '../../api/user';
 import { login } from '../../api/user';
-import './sign-in-up.css';
-{/*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';*/}
-{/*import { faFacebookF, faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';*/}
+//import './sign-in-up.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFacebookF, faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 
 const SignInUp = () => {
     const navigate = useNavigate();
@@ -75,9 +75,9 @@ const SignInUp = () => {
         <form action="#" className="sign-in-up-form">
           <h1 className="header">Create Account</h1>
           <div className="social-container">
-            <a href="#" className="social"></a>
-            <a href="#" className="social"></a>
-            <a href="#" className="social"></a>
+            <a className="social"><FontAwesomeIcon icon={faFacebookF} /></a>
+            <a className="social"><FontAwesomeIcon icon={faGoogle} /></a>
+            <a className="social"><FontAwesomeIcon icon={faLinkedinIn} /></a>
           </div>
           <span className="info">or use your email for registration</span>
           <input type="text" placeholder="Full Name" onChange={handleFullNameChange} required />
@@ -90,9 +90,9 @@ const SignInUp = () => {
         <form action="#"  className="sign-in-up-form">
           <h1 className="header">Sign in</h1>
           <div className="social-container">
-            <a href="#" className="social"></a>
-            <a href="#" className="social"></a>
-            <a href="#" className="social"></a>
+          <a className="social"><FontAwesomeIcon icon={faFacebookF} /></a>
+            <a className="social"><FontAwesomeIcon icon={faGoogle} /></a>
+            <a className="social"><FontAwesomeIcon icon={faLinkedinIn} /></a>
           </div>
           <span className="info">or use your account</span>
           <input type="email" placeholder="Email" onChange={handleEmailChange} required />

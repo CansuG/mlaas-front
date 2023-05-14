@@ -3,3 +3,6 @@ react-bootstrap
 axios
 react-icons
 react-scripts
+@fortawesome/free-brands-svg-icons
+@fortawesome/react-fontawesome
+@fortawesome/free-solid-svg-icons
