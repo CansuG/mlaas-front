@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { summarizeText } from '../../../api/service';
 import "./summarizer.css"
+import RateService from '../../Ratings/rating';
 
 const Service = () => {
   const [input, setInput] = useState('');
@@ -32,12 +33,14 @@ const Service = () => {
           <button className="calculate__button" type="submit">Submit</button>
         </form>
         {response && (
-  <div className="output-container">
-    <p className="output__text">Output: {response}</p>
-  </div>
-)}
+          <div className="output-container">
+            <p className="output__text">Output: {response}</p>
+          </div>
+        )}
     
       </div>
+
+      <div><RateService name="Summarizer"/></div>
     </div>
 
   );

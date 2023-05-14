@@ -1,22 +1,34 @@
 import React, { useState, useEffect } from 'react';
 import { RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import './topbar.css';
-import { logout } from '../../api/user';
+import { getCurrentUser, logout } from '../../api/user';
 import { useNavigate } from 'react-router-dom';
 
 const TopBar = () => {
   const navigate = useNavigate();
   const [toggleMenu, setToggleMenu] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [name, setName] = useState('');
   
   useEffect(() => {
     const token = localStorage.getItem('access_token');
+    fetchUserName(token);
     if (token) {
       setIsLoggedIn(true);
     }else{
       setIsLoggedIn(false);
     }
   }, []);
+
+  const fetchUserName = async (token) => {
+    try {
+      const user = await getCurrentUser(token);
+      setName(user.full_name);
+      console.log("name"+user.full_name)
+    } catch (error) {
+      console.error('Error fetching user:', error);
+    }
+  };
 
   const handleLogout = async() => {
     console.log(localStorage.getItem('access_token'))
@@ -26,11 +38,11 @@ const TopBar = () => {
   };
 
   const handleRegisterClick = () => {
-    navigate('/register')
+    navigate('/sign-in-up')
   };
 
   const handleLoginClick = () => {
-    navigate('/login')
+    navigate('/sign-in-up')
   };
 
   return (
@@ -44,17 +56,14 @@ const TopBar = () => {
           <p><a href="#wgpt3">Models</a></p>
           <p><a href="#possibility">About Us</a></p>
           <p><a href="#features">Contact Us</a></p>
-          <p><a href="#blog">Settings</a></p>
         </div>
       </div>
       {isLoggedIn ? (
         <div className="gpt3__navbar-user">
           <img  />
           <div className="gpt3__navbar-user-dropdown">
-            <p>Username</p>
+            <p>{name}</p>
             <ul>
-              <li><a href="#">Profile</a></li>
-              <li><a href="#">Settings</a></li>
               <li><button onClick={handleLogout}>Logout</button></li>
             </ul>
           </div>
@@ -80,7 +89,7 @@ const TopBar = () => {
           </div>
           {isLoggedIn && (
             <div className="gpt3__navbar-menu_container-links-user">
-              <p>Username</p>
+              <p>Username: {name}</p>
               <ul>
                 <li><a href="#">Profile</a></li>
                 <li><a href="#">Settings</a></li>

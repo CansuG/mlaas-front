@@ -51,6 +51,22 @@
     cursor: pointer;
 }
 
+#model_button{
+    color: black;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+#model_button:hover{
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transform: translateY(5px);
+}
 
 @media screen and (max-width: 550px) {
     .gpt3__blog-container_model-content h3 {

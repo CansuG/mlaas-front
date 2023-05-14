@@ -42,3 +42,17 @@ export const logout = async (token) => {
     throw error.response.data;
   }
 };
+
+export const getCurrentUser = async (token) => {
+  try {
+  
+    const response = await RequestService.get(
+      `/auth/user`,
+      {headers: { Authorization: `Bearer `+ token } });
+      
+      return response.data;
+
+    } catch (error) {
+    throw error.response.data;
+  }
+};
