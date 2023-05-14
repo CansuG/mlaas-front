@@ -13,6 +13,7 @@ import Service from "./components/Services/summarizer/summarizer"
 import ServicesList from './components/Services/service-list/service-list';
 import QuestionAnsweringService from './components/Services/question-answering/question-answering';
 import GenderClassification from './components/Services/gender-classification/gender-classification';
+import SignupPage from './pages/signup/signup';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
     <Router>
       <Routes>
         <Route exact path="/" element={<App/>} />
+        <Route path="/signup" element={<SignupPage/>} />
         <Route path="/login" element={<Login/>} />
         <Route path="/register" element={<Register/>} />
         <Route path="/create-service" element={<CreateService/>}/>
