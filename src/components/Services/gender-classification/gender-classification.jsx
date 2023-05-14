@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { classifyGender } from '../../../api/service';
 import './gender-classification.css';
-import base64ToImage from '../../../Utilies/show-image';
 
 
 const GenderClassification = () => {

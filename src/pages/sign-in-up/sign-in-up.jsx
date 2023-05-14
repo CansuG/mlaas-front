@@ -3,12 +3,11 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { register } from '../../api/user';
 import { login } from '../../api/user';
-import './signup.css';
+import './sign-in-up.css';
 {/*import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';*/}
 {/*import { faFacebookF, faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';*/}
 
-const SignupPage = () => {
-    const [isSignIn, setIsSignIn] = useState(true);
+const SignInUp = () => {
     const navigate = useNavigate();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -26,10 +25,6 @@ const SignupPage = () => {
     const handleFullNameChange = (e) => {
       setFullName(e.target.value);
     };
-
-    const toggleForm = () => {
-      setIsSignIn(prevState => !prevState);
-    }
     
     const handleSignIn = async (e) => {
       e.preventDefault();
@@ -126,4 +121,4 @@ const SignupPage = () => {
   );
 }
 
-export default SignupPage;
+export default SignInUp;

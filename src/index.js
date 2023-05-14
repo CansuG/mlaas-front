@@ -4,26 +4,21 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Login from './pages/login/login';
-import Register from './pages/register/register';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import CreateService from './pages/create-service/create-service';
-import RateService from './components/Ratings/rating';
 import Service from "./components/Services/summarizer/summarizer"
-import ServicesList from './components/Services/service-list/service-list';
 import QuestionAnsweringService from './components/Services/question-answering/question-answering';
 import GenderClassification from './components/Services/gender-classification/gender-classification';
-import SignupPage from './pages/signup/signup';
+import SignInUp from './pages/sign-in-up/sign-in-up';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route exact path="/home" element={<App/>} />
-        <Route path="/signup" element={<SignupPage/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/register" element={<Register/>} />
+        <Route exact path="/" element={<App/>} />
+        <Route path="/home" element={<Navigate to="/" replace />} /> 
+        <Route path="/sign-in-up" element={<SignInUp/>} />
         <Route path="/create-service" element={<CreateService/>}/>
         <Route path="/summarize" element={<Service/>}/>
         <Route path ="/question-answering" element={<QuestionAnsweringService/>}/>
