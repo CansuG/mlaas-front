@@ -29,7 +29,7 @@ const SignupPage = () => {
     <div className="container" id="container">
       <div className="form-container sign-up-container">
         <form action="#">
-          <h1>Create Account</h1>
+          <h1 className="signup-h1">Create Account</h1>
           <div className="social-container">
             <a href="#" className="social"></a>
             <a href="#" className="social"></a>
@@ -71,9 +71,7 @@ const SignupPage = () => {
           </div>
         </div>
       </div>
-      <footer>
-       
-      </footer>
+    
     </div>
   );
 }

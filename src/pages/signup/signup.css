@@ -99,6 +99,7 @@ input {
 	width: 768px;
 	max-width: 100%;
 	min-height: 480px;
+    
 }
 
 .form-container {
@@ -226,27 +227,26 @@ input {
 	width: 40px;
 }
 
-footer {
-    background-color: #222;
-    color: #fff;
-    font-size: 14px;
-    bottom: 0;
-    position: fixed;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 999;
-}
-
-footer p {
-    margin: 10px 0;
-}
-
-footer i {
-    color: red;
-}
-
-footer a {
-    color: #3c97bf;
-    text-decoration: none;
+/* Add styles for screen sizes smaller than 600px */
+@media screen and (max-width: 600px) {
+    .form-container {
+        padding: 0 20px;
+    }
+    
+    .overlay {
+        width: 400%;
+    }
+    
+    .overlay-panel {
+        width: 100%;
+        padding: 0 20px;
+    }
+    
+    .overlay-left {
+        transform: translateX(-100%);
+    }
+    
+    .overlay-right {
+        transform: translateX(100%);
+    }
 }
