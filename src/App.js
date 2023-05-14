@@ -1,6 +1,5 @@
 import './App.css';
 import React from 'react';
-import Login from './pages/login/login.jsx';
 import TopBar from "./components/topbar/TopBar";
 import Header from "./components/header/Header";
 import Footer from './components/footer/Footer';
