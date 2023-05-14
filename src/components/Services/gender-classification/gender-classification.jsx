@@ -56,7 +56,7 @@ const GenderClassification = () => {
           </form>
         </div>
         <div className="col-8">
-          {prediction && prediction.length > 0 && (
+          {predicted_image && (
             <>
               <br />
               <br />

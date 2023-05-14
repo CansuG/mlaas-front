@@ -85,13 +85,12 @@ body {
 }
 
 
-
 .input__label {
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 0.5rem;
   letter-spacing: 0.1rem;
-  margin-right: 1rem;
+   margin-right: 1rem;
     margin-left:1rem
 }
 
