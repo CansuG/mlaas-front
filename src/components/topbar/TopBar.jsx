@@ -53,9 +53,9 @@ const TopBar = () => {
         </div>
         <div className="gpt3__navbar-links_container">
           <p><a href="#home">Home</a></p>
-          <p><a href="#wgpt3">Models</a></p>
-          <p><a href="#possibility">About Us</a></p>
-          <p><a href="#features">Contact Us</a></p>
+          <p><a href="#models">Models</a></p>
+          <p><a href="#aboutapp">About Us</a></p>
+          <p><a href="#contactus">Contact Us</a></p>
         </div>
       </div>
       {isLoggedIn ? (
@@ -82,10 +82,9 @@ const TopBar = () => {
         <div className="gpt3__navbar-menu_container scale-up-center">
           <div className="gpt3__navbar-menu_container-links">
             <p><a href="#home">Home</a></p>
-            <p><a href="#wgpt3">Models</a></p>
-            <p><a href="#possibility">About Us</a></p>
-            <p><a href="#features">Contact Us</a></p>
-            <p><a href="#blog">Settings</a></p>
+            <p><a href="#models">Models</a></p>
+            <p><a href="#aboutapp">About Us</a></p>
+            <p><a href="#contactus">Contact Us</a></p>
           </div>
           {isLoggedIn && (
             <div className="gpt3__navbar-menu_container-links-user">
