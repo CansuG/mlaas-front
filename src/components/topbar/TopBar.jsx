@@ -4,6 +4,8 @@ import './topbar.css';
 import { getCurrentUser, logout } from '../../api/user';
 import { useNavigate } from 'react-router-dom';
 
+
+
 const TopBar = () => {
   const navigate = useNavigate();
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -49,7 +51,7 @@ const TopBar = () => {
     <div className="gpt3__navbar">
       <div className="gpt3__navbar-links">
         <div className="gpt3__navbar-links_logo">
-          <img src='../../../public/assets/ai.png'/>
+          <img src='assets/technology.png'/>
         </div>
         <div className="gpt3__navbar-links_container">
           <p><a href="#home">Home</a></p>
@@ -60,12 +62,11 @@ const TopBar = () => {
       </div>
       {isLoggedIn ? (
         <div className="gpt3__navbar-user">
-          <img  />
           <div className="gpt3__navbar-user-dropdown">
-            <p>{name}</p>
-            <ul>
-              <li><button onClick={handleLogout}>Logout</button></li>
-            </ul>
+            <p className="gpt3__navbar-username">{name}</p>
+
+            <button className="gpt3__navbar-logout-btn" onClick={handleLogout}>Logout</button>
+            
           </div>
         </div>
       ) : (
@@ -88,12 +89,9 @@ const TopBar = () => {
           </div>
           {isLoggedIn && (
             <div className="gpt3__navbar-menu_container-links-user">
-              <p>Username: {name}</p>
-              <ul>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><button onClick={handleLogout}>Logout</button></li>
-              </ul>
+              <p>{name}</p>
+              <button onClick={handleLogout}>Logout</button>
+              
             </div>
           )}
         </div>
