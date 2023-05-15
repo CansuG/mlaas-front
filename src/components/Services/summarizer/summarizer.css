@@ -195,6 +195,14 @@ body {
   }
 
   
+  .home-icon {
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+    color: white; /* Set the color as desired */
+    font-size: 24px; /* Adjust the font size as needed */
+  }
+  
   .input-container {
     margin: 1rem;
   }

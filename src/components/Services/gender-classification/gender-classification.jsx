@@ -3,6 +3,10 @@ import { classifyGender } from '../../../api/service';
 import './gender-classification.css';
 import RateService from '../../Ratings/rating';
 
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+
 
 const GenderClassification = () => {
   const [file, setFile] = useState(null);
@@ -41,6 +45,11 @@ const GenderClassification = () => {
   return (
     <div className="section">
       <div className="section__margin">
+      <div className="home-icon">
+          <Link to="/" className="home-icon">
+            <FontAwesomeIcon icon={faHome} />
+          </Link>
+        </div>
       <h1 className="title gradient__text">Gender Classification</h1>
         <div className="col">
           <p>

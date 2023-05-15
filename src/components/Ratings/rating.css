@@ -1,11 +1,19 @@
 .rating-container {
     display: flex;
     align-items: center;
+    margin-top: 0.6rem;
 }
   
+.rating-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: 0.6rem;
+}
 
 .rate__button {
-    color: black;
     border: none;
     border-radius: 5px;
     padding: 0.5rem 1rem;
@@ -14,8 +22,12 @@
     transition: all 0.3s ease;
     margin-left: 0.5rem;
     margin-top: 0.5rem;
- 
-   
+    display: block; /* Ensures the button takes full width */
+    margin: 1rem auto; /* Centers the button horizontally */
+    background: linear-gradient(89.97deg, #AE67FA 1.84%, #F49867 102.67%);
+    -webkit-background-clip: text; /* Apply gradient to text */
+    -webkit-text-fill-color: transparent; /* Make text transparent */
+    /* Add any other styles you want for the button */
   }
   
 .rate__button:hover {
