@@ -34,13 +34,6 @@ body {
 
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  
-}
 
 .section {
   display: flex;
@@ -62,7 +55,8 @@ body {
 
 .title {
     font-size: 2.4rem;
-    font-weight: 400;
+    font-weight: 500;
+    padding: 2rem;
     margin: 4rem auto 4rem;
     text-align: center;
     color: var(--color-text);

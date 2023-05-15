@@ -23,23 +23,32 @@ const QuestionAnsweringService = () => {
 
   return (
     
-      <div>
-        <label >
+      <div className="section">
+        <div className="section__margin">
+        <h1 className="title gradient__text">Question Answering</h1>
+        <form onSubmit={handleSubmit} className="form__container">
+        <label className="input__label">
           Question:
-          <input type="text" value={question} onChange={e => setQuestion(e.target.value)} />
+          <input type="text" className="input.qa" value={question} onChange={e => setQuestion(e.target.value)} />
         </label>
         &nbsp; &nbsp; 
-        <label>
+        <label className="input__label">
           Helper Text:
-          <input type="text" value={text} onChange={e => setText(e.target.value)} />
+          <input className="input.qa" type="text" value={text} onChange={e => setText(e.target.value)} />
         </label>
         <br></br>
      
-        <button onClick={handleSubmit}>Compute</button>
-        {response && <p style={{backgroundColor: "#ffffff", color: "#000000", border: "2px solid #000000", borderRadius: "4px", padding: "8px", marginTop: "16px"}}>Output: {response}</p>}
-        <div><RateService name="Question Answerer"/></div>
+        <button className="calculate__button"  onClick={handleSubmit}>Compute</button>
+        </form>
+        {response && (
+          <div className="output-container">
+            <p className="output__text">Output: {response}</p>
+          </div>
+        )}
+        
       </div>
-    
+      <div><RateService name="Question Answerer"/></div>
+    </div>
   );
 
 };

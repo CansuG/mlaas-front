@@ -42,10 +42,10 @@ const RateService = ({name}) => {
   };
 
   return (
-    <div className="container mt-4">
+    <div className="">
       <h2>Rate {name}</h2>
       <form onSubmit={handleRateService}>
-        <div className="mb-3">
+        <div className="">
           <label htmlFor="rating" className="form-label">
             Rating (1-5)
           </label>
