@@ -3,6 +3,7 @@ import { rateService } from '../../api/userRating';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import './rating.css'
+import { getCurrentUser } from '../../api/user';
 
 const RateService = ({name}) => {
   
@@ -14,7 +15,8 @@ const RateService = ({name}) => {
     event.preventDefault();
     try {
       const accessToken = localStorage.getItem('access_token');
-      if (!accessToken) {
+      const user = await getCurrentUser(accessToken);
+      if (!accessToken || !user) {
         window.alert('You need to login to rate this service');
         return;
       }
@@ -45,7 +47,7 @@ const RateService = ({name}) => {
     <div className="">
       <h2>Rate {name}</h2>
       <form onSubmit={handleRateService}>
-        <div className="">
+        <div className="rating-div">
           <label htmlFor="rating" className="form-label">
             Rating (1-5)
           </label>

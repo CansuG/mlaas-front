@@ -22,7 +22,7 @@ export const classifyGender = async (formData) => {
 export const summarizeText = async (text) => {
     try {
         const response = await RequestService.post(`/services/summarize`, { text });
-        return response.data;
+        return response.data.summary_text;
     } catch (error) {
         throw error.response.data;
     }
@@ -40,7 +40,7 @@ export const get_predicted_image = async () => {
 export const questionAnswering = async (text, question) => {
     try { 
         const response = await RequestService.post(`/services/qa`, { text, question });
-        return response.data;
+        return response.data.answer;
     } catch (error) {             
         throw error.response.data;
     }     

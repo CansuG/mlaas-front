@@ -14,10 +14,10 @@ const TopBar = () => {
   
   useEffect(() => {
     const token = localStorage.getItem('access_token');
-    fetchUserName(token);
     if (token) {
+      fetchUserName(token);
       setIsLoggedIn(true);
-    }else{
+    } else {
       setIsLoggedIn(false);
     }
   }, []);
@@ -26,9 +26,10 @@ const TopBar = () => {
     try {
       const user = await getCurrentUser(token);
       setName(user.full_name);
-      console.log("name"+user.full_name)
+      setIsLoggedIn(true);
     } catch (error) {
       console.error('Error fetching user:', error);
+      setIsLoggedIn(false);
     }
   };
 
@@ -63,8 +64,8 @@ const TopBar = () => {
       {isLoggedIn ? (
         <div className="gpt3__navbar-user">
           <div className="gpt3__navbar-user-dropdown">
-            <p className="gpt3__navbar-username">{name}</p>
 
+            <p className="gpt3__navbar-username">{name}</p>
             <button className="gpt3__navbar-logout-btn" onClick={handleLogout}>Logout</button>
             
           </div>
@@ -87,13 +88,6 @@ const TopBar = () => {
             <p><a href="#aboutapp">About Us</a></p>
             <p><a href="#contactus">Contact Us</a></p>
           </div>
-          {isLoggedIn && (
-            <div className="gpt3__navbar-menu_container-links-user">
-              <p>{name}</p>
-              <button onClick={handleLogout}>Logout</button>
-              
-            </div>
-          )}
         </div>
         )}
       </div>
