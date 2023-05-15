@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import "./qa.css";
 import { questionAnswering } from '../../../api/service';
 import RateService from '../../Ratings/rating';
+import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 const QuestionAnsweringService = () => {
   const [text, setText] = useState('');
@@ -25,6 +28,11 @@ const QuestionAnsweringService = () => {
     
       <div className="section">
         <div className="section__margin">
+        <div className="home-icon">
+          <Link to="/" className="home-icon">
+            <FontAwesomeIcon icon={faHome} />
+          </Link>
+        </div>
         <h1 className="title gradient__text">Question Answering</h1>
         <form onSubmit={handleSubmit} className="form__container">
         <label className="input__label">
