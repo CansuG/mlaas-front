@@ -59,9 +59,13 @@ const GenderClassification = () => {
               <br />
               <br />
               <h3 className="display-8">Predicted Image</h3>
-              <img src={`data:image/jpeg;base64,${predicted_image}`} className="image-fluid" height="100" alt="" />
-              <hr />
-              <br />
+              <div className="predicted-image-container">
+                <img
+                  src={`data:image/jpeg;base64,${predicted_image}`}
+                  className="predicted-image"
+                  alt=""
+                />
+              </div>
             
             </>
           )}

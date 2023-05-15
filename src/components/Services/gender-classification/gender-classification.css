@@ -1,41 +1,56 @@
+.row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-  .row {
-    display: flex; /* use flexbox to center columns */
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .col {
-    margin: 20px; /* add margin */
-  }
-  
-  .form-control {
-    background-color: #333; /* set input background color */
-    color: #fff; /* set input text color */
-    border: none; /* remove input border */
-  }
-  
-  .btn {
-    background-color: #ff6347; /* set button background color */
-    color: #fff; /* set button text color */
-    border: none; /* remove button border */
-    margin-top: 10px; /* add margin to button */
-  }
-  
-  .table {
-    background-color: #333; /* set table background color */
-    color: #fff; /* set table text color */
-    border-radius: 10px; /* add rounded corners to table */
-    overflow: hidden; /* hide table overflow */
-  }
-  
-  th, td {
-    border: none; /* remove table borders */
-    padding: 10px; /* add padding to table cells */
-  }
-  
-  th {
-    background-color: #ff6347; /* set header background color */
-    color: #fff; /* set header text color */
-    font-weight: bold; /* make header text bold */
-  }
+.col {
+  margin: 20px;
+}
+
+.form-control {
+  background-color: #333;
+  color: #fff;
+  border: none;
+}
+
+.btn {
+  background-color: #ff6347;
+  color: #fff;
+  border: none;
+  margin-top: 10px;
+}
+
+.table {
+  background-color: #333;
+  color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th,
+td {
+  border: none;
+  padding: 10px;
+}
+
+th {
+  background-color: #ff6347;
+  color: #fff;
+  font-weight: bold;
+}
+
+.predicted-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.predicted-image {
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  margin-top: 10px;
+}

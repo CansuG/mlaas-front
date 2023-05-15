@@ -25,12 +25,12 @@ const Service = () => {
       <div className="section__margin">
      
         <h1 className="title gradient__text">Text Summarizer</h1>
-        <form onSubmit={handleSubmit} className="form__container">
+        <form className="form__container">
           <label className="input__label">
             Input:
             <textarea className="input__field" value={input} onChange={e => setInput(e.target.value)} />
           </label>
-          <button className="calculate__button" type="submit">Submit</button>
+          <button onClick={handleSubmit} className="calculate__button" type="submit">Submit</button>
         </form>
         {response && (
           <div className="output-container">
