@@ -30,8 +30,9 @@
     /* Add any other styles you want for the button */
   }
   
-.rate__button:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  .rate__button:hover {
+    box-shadow: 0 4px 8px rgb(104, 103, 103);
     transform: translateY(5px);
 
 }
@@ -47,6 +48,15 @@
 .star-filled {
     color: #F49867;
 } 
+
+.token-expired-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 11px;
+}
   
   
   

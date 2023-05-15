@@ -10,8 +10,9 @@
 
 .form-control {
   background-color: #333;
-  color: #fff;
+  color: black;
   border: none;
+  margin: 2rem;
 }
 
 .btn {

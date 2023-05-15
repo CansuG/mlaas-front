@@ -69,7 +69,7 @@ const RateService = ({name}) => {
           </div>
         </div>
         {errorMessage && (
-          <div className="alert alert-danger" role="alert">
+          <div className="token-expired-error" >
             {errorMessage}
           </div>
         )}
