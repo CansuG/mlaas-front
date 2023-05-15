@@ -29,12 +29,12 @@ const QuestionAnsweringService = () => {
         <form onSubmit={handleSubmit} className="form__container">
         <label className="input__label">
           Question:
-          <input type="text" className="input.qa" value={question} onChange={e => setQuestion(e.target.value)} />
+          <textarea type="text" className="input_field_qa" value={question} onChange={e => setQuestion(e.target.value)} />
         </label>
-        &nbsp; &nbsp; 
+       
         <label className="input__label">
           Helper Text:
-          <input className="input.qa" type="text" value={text} onChange={e => setText(e.target.value)} />
+          <textarea className="input_field_qa" type="text" value={text} onChange={e => setText(e.target.value)} />
         </label>
         <br></br>
      
