@@ -1,9 +1,4 @@
-.container {
-    background-color: #1d1d1d; /* set background color */
-    color: #fff; /* set text color */
-    padding: 20px; /* add padding */
-  }
-  
+
   .row {
     display: flex; /* use flexbox to center columns */
     justify-content: center;

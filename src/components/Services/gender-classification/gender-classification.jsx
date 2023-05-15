@@ -39,12 +39,10 @@ const GenderClassification = () => {
   }, [file]);
 
   return (
-    <div className="container">
-      <div className="row">
+    <div className="section">
+      <div className="section__margin">
+      <h1 className="title gradient__text">Gender Classification</h1>
         <div className="col">
-          <br />
-          <br />
-          <h3 className="display-8">Gender Classification</h3>
           <p>
             Upload an image (.jpg, .jpeg, .png), our model will detect face first and then predict gender based on face
             (Male or Female)

@@ -1,0 +1,15 @@
+.input.qa {
+    border: 2px solid #f49867;
+    border-radius: 5px;
+    padding: 20px;
+    font-size: 16px;
+    color: #000;
+    background-color: rgb(97, 6, 6);
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
+    height: 200px; /* adjust the height as needed */
+    width: 100%;
+    resize: vertical; /* allows vertical resizing */
+  }
+  
