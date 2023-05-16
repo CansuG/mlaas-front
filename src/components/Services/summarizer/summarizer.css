@@ -70,6 +70,25 @@ body {
  
 }
 
+.modeldesc {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.desctext {
+  font-size: 14px;
+  font-weight: 50;
+  margin-bottom: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+.testinputs {
+  margin-top: 1.8rem;
+  font-size: 12px;
+  margin-bottom: 1rem;
+}
+
 .input-group {
   display: flex;
   flex-direction: column;
@@ -82,10 +101,11 @@ body {
 .input__label {
   font-size: 1.2rem;
   font-weight: 400;
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
   letter-spacing: 0.1rem;
    margin-right: 1rem;
-    margin-left:1rem
+    margin-left:1rem;
+    margin-top: 2rem;
 }
 
 .input-group input {
@@ -202,6 +222,8 @@ body {
     color: white; /* Set the color as desired */
     font-size: 24px; /* Adjust the font size as needed */
   }
+
+
   
   .input-container {
     margin: 1rem;
