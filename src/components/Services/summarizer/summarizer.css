@@ -34,18 +34,23 @@ body {
 
 }
 
+.content-container {
+  display: flex;
+}
+
+
 
 .section {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  flex-direction: row; /* Change flex-direction to row */
+  justify-content: space-between; /* Add justify-content property */
+  align-items: flex-start; /* Add align-items property */
   background-color: var(--color-blog);
   color: var(--color-text);
   border-radius: 10px;
   padding: 5rem;
   margin: 4rem;
-  margin-top:3rem;
+  margin-top: 3rem;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease-in-out;
   overflow-x: auto;
@@ -71,8 +76,8 @@ body {
 }
 
 .modeldesc {
-  margin: 20px auto;
-  text-align: center;
+  margin: 20px 0;
+  text-align: right;
 }
 
 .desctext {
@@ -83,10 +88,17 @@ body {
   letter-spacing: 0.1rem;
 }
 
+.form__container {
+  flex: 1; /* Make the form container take remaining width */
+  margin-right: 2rem; /* Add margin to create space between elements */
+}
+
 .testinputs {
   margin-top: 1.8rem;
   font-size: 12px;
   margin-bottom: 1rem;
+  margin-bottom: 1rem;
+  text-align: left; 
 }
 
 .input-group {
@@ -130,8 +142,8 @@ body {
 }
 
 .output-container{
-    display: flex;
-  justify-content: space-between;
+  flex: 1; /* Make the output container take remaining width */
+  margin-left: 2rem;
   margin-top: 3rem;
   background-color: #f3f3f3;
   color: var(--color-text);
@@ -224,10 +236,19 @@ body {
   }
 
 
-  
-  .input-container {
-    margin: 1rem;
+  .description-container {
+    flex: 1;
   }
+
+  .input-container {
+    flex: 1;
+    margin-right: 2rem;
+  }
+
+  .rate-container {
+    margin-top: 5rem;
+  }
+  
   
   /* Media query for small screens */
   @media screen and (max-width: 600px) {
