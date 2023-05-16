@@ -45,7 +45,7 @@ const RateService = ({name}) => {
 
   return (
     <div className="">
-      <h2>Rate {name}</h2>
+     
       <form onSubmit={handleRateService}>
         <div className="rating-div">
           <label htmlFor="rating" className="form-label">
