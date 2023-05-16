@@ -35,6 +35,16 @@ const Service = () => {
         </div>
         <h1 className="title gradient__text">Text Summarizer</h1>
         <form className="form__container">
+          {/*burası desc örnek input */}
+          <div className="modeldesc">
+            <p className="desctext">This model is designed to summarize the output you will enter into the input field given below. </p>
+              <div className="testinputs">
+                <p className="desctext">
+                  Example: 
+Technology's rapid advancements have transformed our lives, offering endless possibilities and challenges. As we navigate this ever-changing landscape, striking a balance between embracing its benefits and addressing ethical concerns becomes crucial for a positive future.
+                </p>
+              </div>
+          </div>
           <label className="input__label">
             Input:
             <textarea className="input__field" value={input} onChange={e => setInput(e.target.value)} />

@@ -35,6 +35,19 @@ const QuestionAnsweringService = () => {
         </div>
         <h1 className="title gradient__text">Question Answering</h1>
         <form onSubmit={handleSubmit} className="form__container">
+        <div className="modeldesc">
+            <p className="desctext">This model is designed to answer the question you will enter </p>
+              <div className="testinputs">
+                <p className="desctext">
+                  Example Question: Why is model conversion important?
+                </p>
+                <p className="helpertext">
+                Example Helper Text: The option to convert models between FARM and transformers gives freedom to the user and let people easily switch between frameworks.
+                </p>
+              </div>
+          </div>
+        
+        
         <label className="input__label">
           Question:
           <textarea type="text" className="input_field_qa" value={question} onChange={e => setQuestion(e.target.value)} />
