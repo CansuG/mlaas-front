@@ -39,14 +39,9 @@ const RateService = ({name}) => {
     setHoveredRating(0);
   };
 
-  const isStarFilled = (star) => {
-    return star <= rating || star <= hoveredRating;
-  };
-
   return (
     <div className="">
-     
-      <form onSubmit={handleRateService}>
+      <form>
         <div className="rating-div">
           <label htmlFor="rating" className="form-label">
             Rating (1-5)
@@ -73,7 +68,7 @@ const RateService = ({name}) => {
             {errorMessage}
           </div>
         )}
-        <button className="rate__button" type="submit" >
+        <button onClick={handleRateService} className="rate__button" type="submit" >
           Rate
         </button>
       </form>

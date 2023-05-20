@@ -60,7 +60,7 @@ const Service = () => {
           </form>
         </div>
         <div className="rate-container">
-          <RateService  />
+          <RateService name="Summarizer" />
         </div>
       </div>
     </div>
