@@ -48,8 +48,6 @@ const Model = ({date, name, text }) => {
 
   return (
   <div className="gpt3__blog-container_model">
-    <div className="gpt3__blog-container_model-image">
-    </div>
     <div className="gpt3__blog-container_model-content">
       <div>
         <p>{formattedDate}</p>

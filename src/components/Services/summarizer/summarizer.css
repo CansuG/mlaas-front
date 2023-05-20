@@ -42,9 +42,9 @@ body {
 
 .section {
   display: flex;
-  flex-direction: row; /* Change flex-direction to row */
+  flex-direction: column; /* Change flex-direction to row */
   justify-content: space-between; /* Add justify-content property */
-  align-items: flex-start; /* Add align-items property */
+  align-items: center; /* Add align-items property */
   background-color: var(--color-blog);
   color: var(--color-text);
   border-radius: 10px;
@@ -77,15 +77,24 @@ body {
 
 .modeldesc {
   margin: 20px 0;
-  text-align: right;
+  text-align: left;
 }
 
 .desctext {
+  font-size: 16px;
+  font-weight: 50;
+  margin-bottom: 1.2rem;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0.1rem;
+}
+
+#desctextEx{
   font-size: 14px;
   font-weight: 50;
   margin-bottom: 1.2rem;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.1rem;
+  margin-left:0.8rem;
 }
 
 .form__container {
@@ -143,7 +152,7 @@ body {
 
 .output-container{
   flex: 1; /* Make the output container take remaining width */
-  margin-left: 2rem;
+  margin-left: 0.5rem;
   margin-top: 3rem;
   background-color: #f3f3f3;
   color: var(--color-text);
@@ -160,7 +169,7 @@ body {
   width: 100%;
 }
 .output__text{
-    font-size: 1.2rem;
+  font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 0.1rem;
   color:#2a6fb3
@@ -190,7 +199,7 @@ body {
     border: 2px solid #f49867;
     border-radius: 4px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 1.2rem;
     color: #000;
     background-color: #fff;
     margin-right: 0.5rem;
@@ -239,7 +248,7 @@ body {
   .description-container {
     flex: 1;
   }
-
+  
   .input-container {
     flex: 1;
     margin-right: 2rem;
@@ -325,3 +334,5 @@ body {
       width: 100%;
     }
   }
+
+  

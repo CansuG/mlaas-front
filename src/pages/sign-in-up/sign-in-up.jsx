@@ -6,6 +6,9 @@ import { login } from '../../api/user';
 import './sign-in-up.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faGoogle, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
+import { Link } from 'react-router-dom';
+import { faHome } from '@fortawesome/free-solid-svg-icons';
+
 
 const SignInUp = () => {
     const navigate = useNavigate();
@@ -104,11 +107,21 @@ const SignInUp = () => {
       <div className="overlay-container">
         <div className="overlay">
           <div className="overlay-panel overlay-left">
+            <div id="home-icon-sign-up">
+              <Link to="/" className="home-icon">
+                <FontAwesomeIcon icon={faHome} />
+              </Link>
+            </div>
             <h1 className="overlay-h1">Welcome Back!</h1>
             <p className="desc">To keep connected with us please login with your personal info</p>
             <button className="ghost" id="signIn">Sign In</button>
           </div>
           <div className="overlay-panel overlay-right">
+            <div id="home-icon-sign-in">
+              <Link to="/" className="home-icon">
+                <FontAwesomeIcon icon={faHome} />
+              </Link>
+            </div>
             <h1 className="overlay-h1">Hello, Friend!</h1>
             <p className="desc">Enter your personal details and start journey with us</p>
             <button className="ghost" id="signUp">Sign Up</button>

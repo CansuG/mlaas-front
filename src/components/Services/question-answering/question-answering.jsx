@@ -67,8 +67,8 @@ const QuestionAnsweringService = () => {
           </div>
         )}
         
+        <div><RateService name="Question Answerer"/></div>
       </div>
-      <div><RateService name="Question Answerer"/></div>
     </div>
   );
 
