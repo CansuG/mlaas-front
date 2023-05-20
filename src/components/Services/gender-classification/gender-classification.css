@@ -12,33 +12,7 @@
   background-color: #333;
   color: black;
   border: none;
-  margin: 2rem;
-}
-
-.btn {
-  background-color: #ff6347;
-  color: #fff;
-  border: none;
-  margin-top: 10px;
-}
-
-.table {
-  background-color: #333;
-  color: #fff;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-th,
-td {
-  border: none;
-  padding: 10px;
-}
-
-th {
-  background-color: #ff6347;
-  color: #fff;
-  font-weight: bold;
+  margin-top: 1rem;
 }
 
 .predicted-image-container {

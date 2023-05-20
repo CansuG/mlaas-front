@@ -79,9 +79,8 @@ const GenderClassification = () => {
             </>
           )}
         </div>
+        <div><RateService name="Gender Classifier"/></div>
       </div>
-
-      <div><RateService name="Gender Classifier"/></div>
     </div>
   );
 };

@@ -253,26 +253,46 @@
 	width: 40px;
 }
 
-/* Add styles for screen sizes smaller than 600px */
-@media screen and (max-width: 600px) {
-    .form-container {
-        padding: 0 20px;
-    }
-    
-    .overlay {
-        width: 400%;
-    }
-    
-    .overlay-panel {
-        width: 100%;
-        padding: 0 20px;
-    }
-    
-    .overlay-left {
-        transform: translateX(-100%);
-    }
-    
-    .overlay-right {
-        transform: translateX(100%);
-    }
+#home-icon-sign-in{
+	position: absolute;
+    top: 0rem;
+    right: 8rem;
+    color: white; /* Set the color as desired */
+    font-size: 20px;
+}
+
+#home-icon-sign-up{
+	position: absolute;
+    top: 0rem;
+    right: 24.5rem;
+    color: white; /* Set the color as desired */
+    font-size: 20px;
+}
+
+
+@media screen and (max-width: 400px) {
+	.container.right-panel-active .sign-in-container,
+	.container.right-panel-active .sign-up-container {
+	  transform: translateX(0);
+	  opacity: 1;
+	  z-index: 5;
+	  animation: none;
+	}
+  
+	.overlay-container {
+	  width: 100%;
+	}
+  
+	.container.right-panel-active .overlay {
+	  transform: translateX(0);
+	}
+  
+	.overlay-panel {
+	  width: 100%;
+	}
+  
+	.overlay-left,
+	.overlay-right {
+	  transform: translateX(0);
+	}
 }

@@ -6,7 +6,6 @@
 .gpt3__blog-heading {
     width: 100%;
     text-align: left;
-
     margin-bottom: 5rem;
 }
 
@@ -29,9 +28,7 @@
 
 .gpt3__blog-container_groupB {
     flex: 1;
-
     display:grid;
-    grid-template-columns: repeat(2, 1fr);
     grid-gap: 2rem;
 }
 
@@ -45,13 +42,6 @@
         margin: 2rem 0;
     }
 
-    .gpt3__blog-container_groupA .gpt3__blog-container_article  {
-       width: 48%;
-    }
-
-    .gpt3__blog-container_groupA .gpt3__blog-container_article-image {
-        height: 250px;
-    }
 }
 
 @media screen and (max-width: 700px) {
