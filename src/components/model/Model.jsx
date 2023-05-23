@@ -23,7 +23,9 @@ const Model = ({date, name, text }) => {
 
     const filteredRatings = ratings.filter((rating) => rating.service_name === name);
     const averageRating = filteredRatings.length > 0 ? ratingSum / filteredRatings.length : 0;
-    setAvrRating(averageRating);
+    const roundedRating = averageRating.toFixed(2); // Round to 3 decimal places
+    
+    setAvrRating(parseFloat(roundedRating)); // Convert back to a number
     
   },[ratings]);
 
