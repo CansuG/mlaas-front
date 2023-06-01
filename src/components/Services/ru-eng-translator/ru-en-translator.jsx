@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { summarizeText } from '../../../api/service';
-import "./summarizer.css";
+import { russianToEnglishTranslator } from '../../../api/service';
 import RateService from '../../Ratings/rating';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHome } from '@fortawesome/free-solid-svg-icons';
 
-const Summarizer = () => {
+const Translator = () => {
   const [input, setInput] = useState('');
   const [response, setResponse] = useState('');
 
@@ -14,8 +13,11 @@ const Summarizer = () => {
     e.preventDefault();
 
     try {
-      const data = await summarizeText(input);
-      setResponse(JSON.stringify(data));
+      console.log("i"+input)
+      const data = await russianToEnglishTranslator(input);
+      console.log("data:"+ data)
+      setResponse(data);
+      console.log("res"+response)
     } catch (err) {
       console.error(err);
     }
@@ -30,15 +32,15 @@ const Summarizer = () => {
               <FontAwesomeIcon icon={faHome} />
             </Link>
           </div>
-          <h1 className="title gradient__text">Text Summarizer</h1>
+          <h1 className="title gradient__text">Russion To English Translator</h1>
         </div>
         <div className="description-container">
             <div className="modeldesc">
-              <p className="desctext">This model is designed to summarize the output you will enter into the input field given below.</p>
+              <p className="desctext">It is a Russian-English translation model.</p>
               <div className="testinputs">
                 <p id="desctextEx">
                   Example: 
-                  Technology's rapid advancements have transformed our lives, offering endless possibilities and challenges. As we navigate this ever-changing landscape, striking a balance between embracing its benefits and addressing ethical concerns becomes crucial for a positive future.
+                  С таким количеством различных платформ для маркетинга и продаж, доступных компаниям, неудивительно, что маркетологи обращаются к искусственному интеллекту (ИИ), чтобы помочь им управлять своими кампаниями. ИИ может помочь в создании более эффективных кампаний, объединяя все различные аспекты кампании, от сегментации клиентов до оптимизации медиа и креатива и автоматизации последующих писем и сообщений.
                 </p>
               </div>
             </div>
@@ -60,11 +62,11 @@ const Summarizer = () => {
           </form>
         </div>
         <div className="rate-container">
-          <RateService name="Summarizer" />
+          <RateService name="Named Entity Recognition Task" />
         </div>
       </div>
     </div>
   );
 };
 
-export default Summarizer;
+export default Translator;

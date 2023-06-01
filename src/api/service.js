@@ -28,9 +28,36 @@ export const summarizeText = async (text) => {
     }
 };
 
-export const get_predicted_image = async () => {
+export const generateText = async (text) => {
   try {
-      const response = await RequestService.get(`/services/get_predicted_image`);
+      const response = await RequestService.post(`/services/generate_text`, { text });
+      return response.data[0].generated_text;
+  } catch (error) {
+      throw error.response.data;
+  }
+};
+
+export const russianToEnglishTranslator = async (text) => {
+  try {
+      const response = await RequestService.post(`/services/ru-en-translation`, { text });
+      return response.data[0].translation_text;
+  } catch (error) {
+      throw error.response.data;
+  }
+};
+
+export const findLabel = async (text, label) => {
+  try { 
+      const response = await RequestService.post(`/services/zero-shot-classification`, { text, label });
+      return response.data;
+  } catch (error) {             
+      throw error.response.data;
+  }     
+};
+
+export const textToTextGeneration = async (text) => {
+  try {
+      const response = await RequestService.post(`/services/text-2-text-generation`, { text });
       return response.data;
   } catch (error) {
       throw error.response.data;

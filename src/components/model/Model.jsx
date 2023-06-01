@@ -45,7 +45,13 @@ const Model = ({date, name, text }) => {
       navigate('/question-answering')
     } else if(name ==='Gender Classifier'){
       navigate('/genderapp')
-    }
+    } else if(name ==='Text Generator'){
+      navigate('/text-generation')
+    } else if(name ==='Label Finder'){
+      navigate('/label-finder')
+    } else if(name ==='Named Entity Recognition Task'){
+      navigate('/translator')
+    } 
   }
 
   return (
