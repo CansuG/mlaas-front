@@ -7,7 +7,7 @@ import { faHome } from '@fortawesome/free-solid-svg-icons';
 
 const LabelFinder = () => {
   const [text, setText] = useState('');
-  const [label, setLabel] = useState('');
+  const [label, setLabel] = useState([]);
   const [response, setResponse] = useState('');
 
   console.log("text and question:"+text+" "+label)
@@ -17,7 +17,9 @@ const LabelFinder = () => {
     
     try {
       const data = findLabel(text, label);
+      console.log("d"+data)
       setResponse(data);
+      console.log(response)
     } catch (err) {
       console.error(err);
     }

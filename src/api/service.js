@@ -46,9 +46,9 @@ export const russianToEnglishTranslator = async (text) => {
   }
 };
 
-export const findLabel = async (text, label) => {
+export const findLabel = (text, candidate_labels) => {
   try { 
-      const response = await RequestService.post(`/services/zero-shot-classification`, { text, label });
+      const response = RequestService.post(`/services/zero-shot-classification`, { text, candidate_labels });
       return response.data;
   } catch (error) {             
       throw error.response.data;

@@ -51,6 +51,8 @@ const Model = ({date, name, text }) => {
       navigate('/label-finder')
     } else if(name ==='Named Entity Recognition Task'){
       navigate('/translator')
+    } else if(name ==='Text To Text Generator'){
+      navigate('/text2text')
     } 
   }
 
