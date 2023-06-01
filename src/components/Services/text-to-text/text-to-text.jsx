@@ -33,7 +33,7 @@ const TextToText = () => {
         </div>
         <div className="description-container">
             <div className="modeldesc">
-              <p className="desctext">This model is designed to summarize the output you will enter into the input field given below.</p>
+              <p className="desctext">This is a model under the token classification category. Usually used for sentence parsing, either grammatical, or Named Entity Recognition (NER) to understand keywords contained within text.</p>
               <div className="testinputs">
                 <p id="desctextEx">
                   Example: 
