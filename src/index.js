@@ -13,6 +13,7 @@ import Summarizer from './components/Services/summarizer/summarizer';
 import TextGenerator from './components/Services/text-generator/text-generator';
 import LabelFinder from './components/Services/label-finder/label-finder';
 import Translator from './components/Services/ru-eng-translator/ru-en-translator';
+import TextToText from './components/Services/text-to-text/text-to-text';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,6 +30,7 @@ root.render(
         <Route path ="/text-generation" element={<TextGenerator/>}/>
         <Route path ="/label-finder" element={<LabelFinder/>}/>
         <Route path ="/translator" element={<Translator/>}/>
+        <Route path ="/text2text" element={<TextToText/>}/>
       </Routes>
     </Router>
   </React.StrictMode>
