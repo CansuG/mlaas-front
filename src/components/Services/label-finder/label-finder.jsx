@@ -16,7 +16,7 @@ const LabelFinder = () => {
     e.preventDefault();
     
     try {
-      const data = findLabel(text, label);
+      const data = await findLabel(text, label);
       console.log("d"+data)
       setResponse(data);
       console.log(response)
@@ -34,7 +34,7 @@ const LabelFinder = () => {
             <FontAwesomeIcon icon={faHome} />
           </Link>
         </div>
-        <h1 className="title gradient__text">Question Answering</h1>
+        <h1 className="title gradient__text">Label Finder</h1>
         <form onSubmit={handleSubmit} className="form__container">
         <div className="modeldesc">
             <p className="desctext">You simply pass a sentence/paragraph and the possible labels for that sentence, and you get a result.</p>
